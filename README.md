@@ -81,8 +81,7 @@ https://github.com/Wernigerode23/DVWer_new/commit/104ab0c4a85bf6715a611bf154a064
 
 Ответ https://github.com/Wernigerode23/DVWer_new/activity
 
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота](ссылка на скриншот)`
+
 
 ### Задание 4
 
