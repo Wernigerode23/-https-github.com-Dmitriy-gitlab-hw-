@@ -68,7 +68,7 @@ https://github.com/Wernigerode23/DVWer_new.git
 
 ```
 Поле для вставки кода...
-....https://github.com/Wernigerode23/DVWer_new/commit/104ab0c4a85bf6715a611bf154a0642bdfb2e6dc
+https://github.com/Wernigerode23/DVWer_new/commit/104ab0c4a85bf6715a611bf154a0642bdfb2e6dc
 ```
 
 `При необходимости прикрепитe сюда скриншоты
