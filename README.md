@@ -80,6 +80,6 @@ https://github.com/Wernigerode23/DVWer_new/commit/104ab0c4a85bf6715a611bf154a064
 5. `Сделайте коммит и пуш.`
 
 Ответ 
-https://github.com/Wernigerode23/DVWer_new/activity
+(https://github.com/Wernigerode23/DVWer_new/activity)
 
 
