@@ -79,7 +79,8 @@ https://github.com/Wernigerode23/DVWer_new/commit/104ab0c4a85bf6715a611bf154a064
 4. `Сделайте мердж этой ветки в основную. Сначала нужно переключиться на неё, а потом вызывать git merge.`
 5. `Сделайте коммит и пуш.`
 
-Ответ https://github.com/Wernigerode23/DVWer_new/activity
+Ответ 
+https://github.com/Wernigerode23/DVWer_new/activity
 
 
 
