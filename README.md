@@ -9,8 +9,9 @@
 На проверку отправьте получившуюся схему в формате pkt и скриншот, где виден процесс настройки маршрутизатора.
 Ответ:
 [PKT FILE](https://disk.yandex.ru/d/SFXYB-iiphNeRA)
-![screenshot-1](https://github.com/zitrax1/8-01-WH/blob/main/img/cisco.jpg)
----
+![image](https://github.com/Wernigerode23/-https-github.com-Dmitriy-gitlab-hw-/assets/153208339/b27a4758-7c3b-4d6c-b4ab-b785c8fb7d2c)
+![image](https://github.com/Wernigerode23/-https-github.com-Dmitriy-gitlab-hw-/assets/153208339/de98ed75-4ee2-4e2f-84bd-54679eeb9ca5)
+
 
 ### Задание 2
 
@@ -26,3 +27,12 @@
 
 2.конфигурационный файл keepalived
  https://disk.yandex.ru/d/BMyHxbe50p03Sg
+3. скриншот с демонстрацией переезда плавающего ip на другой сервер в случае недоступности порта или файла index.html
+- сервер включен
+![image](https://github.com/Wernigerode23/-https-github.com-Dmitriy-gitlab-hw-/assets/153208339/d6b6c9a3-8c93-42eb-94e7-ba68c93571b7)
+- сервер отключен
+  ![image](https://github.com/Wernigerode23/-https-github.com-Dmitriy-gitlab-hw-/assets/153208339/528a6265-3b3b-4866-906a-c64dd3ab5b34)
+- второй сервер
+  ![image](https://github.com/Wernigerode23/-https-github.com-Dmitriy-gitlab-hw-/assets/153208339/4136cdac-a278-4db8-b19b-f83f0d4b9042)
+
+
