@@ -24,7 +24,35 @@
  
 1. ![image](https://github.com/Wernigerode23/-https-github.com-Dmitriy-gitlab-hw-/assets/153208339/c0e32705-a8a0-4e83-80b0-382c51ed0e69)
 
-2. `Заполните здесь этапы выполнения, если требуется ....`
+2. #global_defs {
+#       script_user siz
+#       enable_script_security
+#}
+vrrp_script test {
+        script   /home/siz/ping.sh
+        interval 3
+        fall 1
+        rise 1
+#       weight 20 reverse
+        user root root
+}
+
+vrrp_instance VI_1 {
+        state MASTER
+        interface enp0s3
+        virtual_router_id 15
+        priority 255
+        advert_int 1
+        virtual_ipaddress {
+              192.168.0.15/24
+        }
+
+        track_script {
+                test
+
+}
+
+}
 3. `Заполните здесь этапы выполнения, если требуется ....`
 4. `Заполните здесь этапы выполнения, если требуется ....`
 5. `Заполните здесь этапы выполнения, если требуется ....`
