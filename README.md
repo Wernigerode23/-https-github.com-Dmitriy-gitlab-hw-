@@ -8,7 +8,7 @@
 
 На проверку отправьте получившуюся схему в формате pkt и скриншот, где виден процесс настройки маршрутизатора.
 Ответ:
-[PKT FILE](https://github.com/zitrax1/8-01-WH/blob/main/pkt/hsrp_advanced.pkt)
+[PKT FILE]([https://github.com/zitrax1/8-01-WH/blob/main/pkt/hsrp_advanced.pkt](https://disk.yandex.ru/d/SFXYB-iiphNeRA)
 ![screenshot-1](https://github.com/zitrax1/8-01-WH/blob/main/img/cisco.jpg)
 ---
 1. `Заполните здесь этапы выполнения, если требуется ....`
