@@ -1,85 +1,108 @@
-# Домашнее задание к занятию "GIT" - `Вернигоров Дмитрий`
+# Домашнее задание к занятию 12.02 - "`Работа с данными (DDL/DML)`" - `Вернигоров Дмитрий`
 
-
-### Инструкция по выполнению домашнего задания
-
-   1. Сделайте `fork` данного репозитория к себе в Github и переименуйте его по названию или номеру занятия, например, https://github.com/имя-вашего-репозитория/git-hw или  https://github.com/имя-вашего-репозитория/7-1-ansible-hw).
-   2. Выполните клонирование данного репозитория к себе на ПК с помощью команды `git clone`.
-   3. Выполните домашнее задание и заполните у себя локально этот файл README.md:
-      - впишите вверху название занятия и вашу фамилию и имя
-      - в каждом задании добавьте решение в требуемом виде (текст/код/скриншоты/ссылка)
-      - для корректного добавления скриншотов воспользуйтесь [инструкцией "Как вставить скриншот в шаблон с решением](https://github.com/netology-code/sys-pattern-homework/blob/main/screen-instruction.md)
-      - при оформлении используйте возможности языка разметки md (коротко об этом можно посмотреть в [инструкции  по MarkDown](https://github.com/netology-code/sys-pattern-homework/blob/main/md-instruction.md))
-   4. После завершения работы над домашним заданием сделайте коммит (`git commit -m "comment"`) и отправьте его на Github (`git push origin`);
-   5. Для проверки домашнего задания преподавателем в личном кабинете прикрепите и отправьте ссылку на решение в виде md-файла в вашем Github.
-   6. Любые вопросы по выполнению заданий спрашивайте в чате учебной группы и/или в разделе “Вопросы по заданию” в личном кабинете.
-   
-Желаем успехов в выполнении домашнего задания!
-   
-### Дополнительные материалы, которые могут быть полезны для выполнения задания
-
-1. [Руководство по оформлению Markdown файлов](https://gist.github.com/Jekins/2bf2d0638163f1294637#Code)
-
----
 
 ### Задание 1
-Что нужно сделать:
+1.1. Поднимите чистый инстанс MySQL версии 8.0+. Можно использовать локальный сервер или контейнер Docker.
 
-1.Зарегистрируйте аккаунт на GitHub.
+1.2. Создайте учётную запись sys_temp. 
 
-2.Создайте публичный репозиторий. Обязательно поставьте галочку в поле «Initialize this repository with a README».
+1.3. Выполните запрос на получение списка пользователей в базе данных. (скриншот)
 
-3.Склонируйте репозиторий, используя https протокол git clone ....
+#### ОТВЕТ:
+![Скриншот-1](https://github.com/Monooks/12-02_NetoHW/blob/main/img/12.02_1.png)
 
-4. Перейдите в каталог с клоном репозитория.
-   
-6. Произведите первоначальную настройку Git, указав своё настоящее имя и email: git config --global user.name и git config --global user.email johndoe@example.com.
-   
-8. Выполните команду git status и запомните результат.
-   
-10. Отредактируйте файл README.md любым удобным способом, переведя файл в состояние Modified.
-    
-12. Ещё раз выполните git status и продолжайте проверять вывод этой команды после каждого следующего шага.
+1.4. Дайте все права для пользователя sys_temp. 
 
-    
-14. Посмотрите изменения в файле README.md, выполнив команды git diff и git diff --staged.
-    
-16. Переведите файл в состояние staged или, как говорят, добавьте файл в коммит, командой git add README.md.
-    
-18. Ещё раз выполните команды git diff и git diff --staged.
-    
-12 Теперь можно сделать коммит git commit -m 'First commit'.
+1.5. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
 
-20. Сделайте git push origin master.
-    
-В качестве ответа добавьте ссылку на этот коммит в ваш md-файл с решением.
-https://github.com/Wernigerode23/DVWer_new.git
+#### ОТВЕТ:
+![Скриншот-2](https://github.com/Monooks/12-02_NetoHW/blob/main/img/12.02_2.png)
 
+1.6. Переподключитесь к базе данных от имени sys_temp.
 
+Для смены типа аутентификации с sha2 используйте запрос: 
+```sql
+ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+```
+#### ОТВЕТ:
+![Скриншот-3](https://github.com/Monooks/12-02_NetoHW/blob/main/img/12.02_3.png)
 
+1.6. По ссылке https://downloads.mysql.com/docs/sakila-db.zip скачайте дамп базы данных.
 
+1.7. Восстановите дамп в базу данных.
+
+1.8. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
+
+#### ОТВЕТ:
+![Скриншот-4](https://github.com/Monooks/12-02_NetoHW/blob/main/img/12.02_4.png)
+
+*Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*
+
+#### ОТВЕТ (простыня со всеми запросами):
+```bash
+# ssh user@158.160.19.198 -i id_rsa
+$ sudo -i
+# apt update
+# apt install mysql-server mysql-client
+# mysqladmin password -u root -p
+# mysql_secure_installation
+# mysql -u root -p
+mysql> CREATE USER 'sys_test'@'localhost' IDENTIFIED BY 'password';
+mysql> SELECT user,authentication_string,plugin,host FROM mysql.user;
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'sys_test'@'localhost';
+mysql> show grants for 'sys_test'@'localhost';
+mysql> exit
+# mysql -u sys_test -p
+mysql> SELECT user();
+mysql> exit
+# wget https://downloads.mysql.com/docs/sakila-db.zip
+# apt install unzip
+# unzip sakila-db.zip
+# mysql -u sys_test -p
+mysql> CREATE DATABASE `sakila`;
+mysql> SHOW DATABASES;
+mysql> exit
+# export DBNAME=sakila
+# mysql -u sys_test -p ${DBNAME} < /root/sakila-db/sakila-schema.sql
+# mysql -u sys_test -p ${DBNAME} < /root/sakila-db/sakila-data.sql
+# mysql -u sys_test -p
+mysql> SHOW DATABASES;
+mysql> USE sakila;
+mysql> SHOW TABLES;
+```
+
+---
 ### Задание 2
+Составьте таблицу, используя любой текстовый редактор или Excel, в которой должно быть два столбца: в первом должны быть названия таблиц восстановленной базы, во втором названия первичных ключей этих таблиц. Пример: (скриншот/текст)
+```
+Название таблицы | Название первичного ключа
+customer         | customer_id
+```
 
-1. `Создайте файл .gitignore (обратите внимание на точку в начале файла) и проверьте его статус сразу после создания.`
-2. `Добавьте файл .gitignore в следующий коммит git add....`
-3. `Напишите правила в этом файле, чтобы игнорировать любые файлы .pyc, а также все файлы в директории cache.`
-4. `Сделайте коммит и пуш.`
-
-
-Ответ
-https://github.com/Wernigerode23/DVWer_new/commit/104ab0c4a85bf6715a611bf154a0642bdfb2e6dc
-
-### Задание 3
-
-`Приведите ответ в свободной форме........`
-
-1. `Создайте новую ветку dev и переключитесь на неё.`
-2. `Создайте файл test.sh с произвольным содержимым.`
-3. `Сделайте несколько коммитов и пушей, имитируя активную работу над этим файлом.`
-4. `Сделайте мердж этой ветки в основную. Сначала нужно переключиться на неё, а потом вызывать git merge.`
-5. `Сделайте коммит и пуш.`
-
-Ответ 
-(https://github.com/Wernigerode23/DVWer_new/activity)
-
-
+#### ОТВЕТ:
+![Скриншот-5](https://github.com/Monooks/12-02_NetoHW/blob/main/img/12.02_5.png)
+```
+Название таблицы             | Название первичного ключа
+actor                        | actor_id
+actor_info                   | 
+address                      | address_id
+category                     | category_id
+city                         | city_id
+country                      | country_id
+customer                     | customer_id
+customer_list                | 
+film                         | film_id
+film_actor                   | actor_id, film_id
+film_category                | film_id, category_id
+film_list                    | 
+film_text                    | film_id
+inventory                    | inventory_id
+language                     | language_id
+nicer_but_slower_film_list   | 
+payment                      | payment_id
+rental                       | rental_id
+sales_by_film_category       | 
+sales_by_store               | 
+staff                        | staff_id
+staff_list                   | 
+store                        | store_id
